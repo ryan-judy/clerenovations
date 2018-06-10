@@ -20,99 +20,96 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row">
 
 			<div class="col-md-12">
+<!-- Footer -->
+<footer class="page-footer font-small bg-dark lighten-3 pt-4 mt-4">
 
-				<footer class="page-footer center-on-small-only unique-color-dark">
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
 
+    <!-- Grid row -->
+    <div class="row">
 
-        <!--Footer Links-->
-        <div class="container mt-5 mb-4 text-center text-md-left">
-            <div class="row">
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
 
-                <!--First column-->
-                <div class="col-md-3 col-lg-4 col-xl-3 mb-r">
-                    <h6 class="title font-bold">
-                        <strong>G&G Properties</strong>
-                    </h6>
-                    <hr class="blue mb-4 pb-1 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <p>G&G Properties are property investors group with significant experience in residential real estate acquisition, development, and management in the Greater Cleveland area.</p>
-                </div>
-                <!--/.First column-->
+        <!-- Content -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Footer Content</h5>
+        <p>Here you can use rows and columns here to organize your footer content.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum.</p>
 
-                <!--Second column-->
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-r">
-                    <h6 class="title font-bold">
-                        <strong>Services</strong>
-                    </h6>
-                    <hr class="blue mb-4 pb-1 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <p>
-                        <a href="/services/home-renovations">Home Renovations</a>
-                    </p>
-                    <p>
-                        <a href="/services/new-construction">New Construction</a>
-                    </p>
-                    <p>
-                        <a href="/services/property/management">Property Management</a>
-                    </p>
-                    <p>
-                        <a href="/services/other">Other</a>
-                    </p>
-                </div>
-                <!--/.Second column-->
+      </div>
+      <!-- Grid column -->
 
-                <!--Third column-->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-r">
-                    <h6 class="title font-bold">
-                        <strong>Projects</strong>
-                    </h6>
-                    <hr class="blue mb-4 pb-1 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <p>
-                        <a href="#!">22026 Calverton</a>
-                    </p>
-                    <p>
-                        <a href="#!">Tremont Townhomes</a>
-                    </p>
-                    <p>
-                        <a href="#!">23599 Shaker Blvd</a>
-                    </p>
-                    <p>
-                        <a href="#!">Other</a>
-                    </p>
-                </div>
-                <!--/.Third column-->
+      <hr class="clearfix w-100 d-md-none">
 
-                <!--Fourth column-->
-                <div class="col-md-4 col-lg-3 col-xl-3">
-                    <h6 class="title font-bold">
-                        <strong>Contact</strong>
-                    </h6>
-                    <hr class="blue mb-4 pb-1 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <p>
-                        <i class="fa fa-home mr-3"></i>123 Main St, Cleveland, OH 44102</p>
-                    <p>
-                        <i class="fa fa-envelope mr-3"></i>info@example.com</p>
-                    <p>
-                        <i class="fa fa-phone mr-3"></i>216-111-111</p>
-                    <p>
-                        <i class="fa fa-phone mr-3"></i>216-222-2222</p>
-                </div>
-                <!--/.Fourth column-->
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
 
-            </div>
-        </div>
-        <!--/.Footer Links-->
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
 
-        <!-- Copyright-->
-        <div class="footer-copyright">
-            <div class="container-fluid">
-                © 2017 Copyright:
-                <a href="https://www.gangprops.com">
-                    <strong>G&GProperties.com</strong>
-                </a>
-            </div>
-        </div>
-        <!--/.Copyright -->
+        <ul class="list-unstyled">
+          <li><p><a href="#!">PROJECTS</a></p></li>
+          <li><p><a href="#!">ABOUT US</a></p></li>
+          <li><p><a href="#!">BLOG</a></p></li>
+          <li><p><a href="#!">AWARDS</a></p></li>
+        </ul>
 
-    </footer>
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Contact details -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+
+        <ul class="list-unstyled">
+          <li><p><i class="fa fa-home mr-3"></i> New York, NY 10012, US</p></li>
+          <li><p><i class="fa fa-envelope mr-3"></i> info@example.com</p></li>
+          <li><p><i class="fa fa-phone mr-3"></i> + 01 234 567 88</p></li>
+          <li><p><i class="fa fa-print mr-3"></i> + 01 234 567 89</p></li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+
+        <!-- Social buttons -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+
+        <!-- Facebook -->
+        <a type="button" class="btn-floating btn-fb"><i class="fa fa-facebook"></i></a>
+        <!-- Twitter -->
+        <a type="button" class="btn-floating btn-tw"><i class="fa fa-twitter"></i></a>
+        <!-- Google +-->
+        <a type="button" class="btn-floating btn-gplus"><i class="fa fa-google-plus"></i></a>
+        <!-- Dribbble -->
+        <a type="button" class="btn-floating btn-dribbble"><i class="fa fa-dribbble"></i></a>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center">© 2018 Copyright:
+    <a href="https://mdbootstrap.com/bootstrap-tutorial/"> CityLinkRenovations.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 
 			</div><!--col end -->
 

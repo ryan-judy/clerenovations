@@ -18,9 +18,9 @@ the_content();
                     <div class="row pt-5 mt-3">
                         <div class="col-md-12 mb-3">
                             <div class="intro-info-content text-center">
-                                <h1 class="display-1 white-text mb-5 wow fadeInDown" data-wow-delay="0.3s"><?php the_field('hero_heading')?>
+                                <h1 class="display-1 text-dark mb-5 wow fadeInDown" data-wow-delay="0.3s"><?php the_field('hero_heading')?>
                                 </h1>
-                                <h5 class="font-up mb-5 mt-1 text-light spacing font-bold wow fadeInDown" data-wow-delay="0.3s"><?php the_field('hero_subhead')?></h5>
+                                <h5 class="font-up mb-5 mt-1 text-dark spacing font-bold wow fadeInDown" data-wow-delay="0.3s"><?php the_field('hero_subhead')?></h5>
                                 <a href="<?php the_field('hero_button_1_link')?>" class="btn btn-elegant bg-dark btn-lg wow fadeInDown" data-wow-delay="0.3s"><?php the_field('hero_button_1_cta')?></a>
                                 <a href="<?php the_field('hero_button_2_link')?>" class="btn btn-primary btn-lg wow fadeInDown" data-wow-delay="0.3s"><?php the_field('hero_button_2_cta')?></a>
                             </div>
@@ -29,12 +29,74 @@ the_content();
                 </div>
             </div>
         </div>
-<div class= "container py-5">
-<div class="divider-new my-4">
-            <h2 class="h2-responsive text-dark mx-4 font-bold wow fadeIn"><?php the_field('component_heading_2', false, false); ?></h2>
-        </div>
-            <p class="section-description lead text-dark text-center mb-5 mx-lg-5"><?php the_field('component_subhead_2', false, false); ?></p>
+<div class= "container-fluid py-5" style="background-image: url(<?php the_field('component_image_1', 81); ?>);">
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-5 text-left">
+            <h2 class="h2-responsive text-dark font-bold wow fadeIn"><?php the_field('component_heading_2', false, false); ?></h2>
+                        <p class="section-description lead text-dark"><?php the_field('component_subhead_2', false, false); ?></p>
 
+        </div>
+    <div class="col-lg-7 mt-3 pl-4">
+        <h4 class="text-dark font-light my-5"><i class="fa fa-trophy pr-4"></i> Award Winning Renovation/Remodeling Company</h4>
+        <h4 class="text-dark my-5"><i class="fa fa-user pr-4"></i> Dedicated & Specialized Team of Professionals</h4>
+        <h4 class="text-dark my-5"><i class="fa fa-heart pr-4"></i> Trusted by over 2,500 homeowners</h4>
+    </div>
+    </div>
+    </div>
+
+</div>
+
+
+<!--/Section: Best features-->
+
+        <div class="container-fluid py-5 bg-dark">
+            <div class = "container">
+        <div class="divider-new my-4">
+            <h2 class="h2-responsive text-light mx-4 font-bold wow fadeIn"><?php the_field('component_heading'); ?></h2>
+        </div>
+
+        <!--Section: Features v.1-->
+        <section class="section feature-box text-center">
+            <!--Grid row-->
+            <div class="row text-center">
+
+                <!--Grid column-->
+                <?php 
+// the query
+$wpb_all_query = new WP_Query(array('post_type'=>'service', 'post_status'=>'publish', 'posts_per_page'=>4)); ?>
+ 
+<?php if ( $wpb_all_query->have_posts() ) : ?>
+  
+    <!-- the loop -->
+    <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
+         <div class="col-md-3 mb-r">
+                    <div class="card card-body text-center bg-light">
+                            <!--Title-->
+                            <h4 class="card-title text-center"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                            <hr>
+                            <!--Text-->
+                            <a href="<?php the_permalink(); ?>" class="btn btn-elegant bg-dark">LEARN MORE</a>
+
+                     </div> 
+                </div>
+    <?php endwhile; ?>
+    <!-- end of the loop -->
+  
+    <?php wp_reset_postdata(); ?>
+ 
+<?php else : ?>
+    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+<?php endif; ?>
+
+
+            </div>
+            <!--Grid row-->
+            </div>
+        </section>
+        <!--Section: Features v.1-->
+</div>
+<div class= "container pt-4">
         <!--Section: Best features-->
         <section id="best-features">
 
@@ -52,7 +114,7 @@ the_content();
 
         ?>
                 <!--First columnn-->
-                <div class="col-lg-6 mb-r">
+                <div class="col-lg-4 mb-r">
 
                     <!--Card-->
                     <div class="card hoverable wow fadeIn">
@@ -60,9 +122,9 @@ the_content();
                         <!--Card image-->
                         <div class="twentytwenty-container">
 
-                <img class="services-image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
 
-                <img class="services-image" src="<?php echo $image2['url']; ?>" alt="<?php echo $image2['alt'] ?>" />
+                <img src="<?php echo $image2['url']; ?>" alt="<?php echo $image2['alt'] ?>" />
 
             </div>
 
@@ -74,7 +136,7 @@ the_content();
                             <hr>
                             <!--Text-->
                             <p class="card-text"><?php the_field('module_1_content', false, false); ?></p>
-                            <button type="button" class="btn btn-elegant bg-dark"><?php the_field('module_1_button_cta'); ?></button>
+                            <a href="<?php the_field('module_1_button_link'); ?>" class="btn btn-elegant bg-dark"><?php the_field('module_1_button_cta'); ?></a>
 
                         </div>
             <?php endwhile; ?>
@@ -85,88 +147,112 @@ the_content();
                     </div>
                     <!--/.Card-->
                 </div>
-                <!--First columnn-->
+<?php if( have_rows('module_1_imgae') ): ?>
 
-                <!--Second columnn-->
-                <div class="col-lg-6 mb-r">
+
+    <?php while( have_rows('module_1_imgae') ): the_row(); 
+
+        // vars
+            $image = get_sub_field('before');
+
+        $image2 = get_sub_field('after');
+
+
+        ?>
+                <!--First columnn-->
+                <div class="col-lg-4 mb-r">
+
                     <!--Card-->
-                    <div class="card hoverable wow fadeIn" data-wow-delay="0.2s">
+                    <div class="card hoverable wow fadeIn">
 
                         <!--Card image-->
-                        <img class="img-fluid resize services-image" src="<?php the_field('module_2_image'); ?>" alt="Card image cap">
+                        <div class="twentytwenty-container">
+
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+
+                <img src="<?php echo $image2['url']; ?>" alt="<?php echo $image2['alt'] ?>" />
+
+            </div>
+
 
                         <!--Card content-->
                         <div class="card-body text-center">
                             <!--Title-->
-                            <h4 class="card-title text-center"><?php the_field('module_2_heading'); ?></h4>
+                            <h4 class="card-title text-center"><?php the_field('module_1_heading'); ?></h4>
                             <hr>
                             <!--Text-->
-                            <p class="card-text"><?php the_field('module_2_content', false, false); ?></p>
-                            <button type="button" class="btn btn-elegant bg-dark"><?php the_field('module_2_button_cta'); ?></button>
+                            <p class="card-text"><?php the_field('module_1_content', false, false); ?></p>
+                            <a href="<?php the_field('module_1_button_link'); ?>" class="btn btn-elegant bg-dark"><?php the_field('module_1_button_cta'); ?></a>
 
                         </div>
+            <?php endwhile; ?>
+
+
+<?php endif; ?>
 
                     </div>
                     <!--/.Card-->
                 </div>
+
+ <?php if( have_rows('module_1_imgae') ): ?>
+
+
+    <?php while( have_rows('module_1_imgae') ): the_row(); 
+
+        // vars
+            $image = get_sub_field('before');
+
+        $image2 = get_sub_field('after');
+
+
+        ?>
+                <!--First columnn-->
+                <div class="col-lg-4 mb-r">
+
+                    <!--Card-->
+                    <div class="card hoverable wow fadeIn">
+
+                        <!--Card image-->
+                        <div class="twentytwenty-container">
+
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+
+                <img src="<?php echo $image2['url']; ?>" alt="<?php echo $image2['alt'] ?>" />
+
+            </div>
+
+
+                        <!--Card content-->
+                        <div class="card-body text-center">
+                            <!--Title-->
+                            <h4 class="card-title text-center"><?php the_field('module_1_heading'); ?></h4>
+                            <hr>
+                            <!--Text-->
+                            <p class="card-text"><?php the_field('module_1_content', false, false); ?></p>
+                            <a href="<?php the_field('module_1_button_link'); ?>" class="btn btn-elegant bg-dark"><?php the_field('module_1_button_cta'); ?></a>
+
+                        </div>
+            <?php endwhile; ?>
+
+
+<?php endif; ?>
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+
+                               
             </div>
 
         </section>
         <!--/Section: Best features-->
 </div>
-
-<!--/Section: Best features-->
-
-        <div class="container-fluid py-5" style="background-color: #1c2331">
-            <div class = "container">
-        <div class="divider-new my-4">
-            <h2 class="h2-responsive text-light mx-4 font-bold wow fadeIn"><?php the_field('component_heading'); ?></h2>
-        </div>
-
-        <!--Section: Features v.1-->
-        <section class="section feature-box text-center">
-
-            <!--Section description-->
-            <p class="section-description lead text-light mb-5 mx-lg-5"><?php the_field('component_subhead', false, false); ?></p>
-
-            <!--Grid row-->
-            <div class="row text-center">
-
-                <!--Grid column-->
-                <div class="col-md-4 mb-r">
-                    <i class="fa fa-3x fa-calendar blue-text"></i>
-                    <h5 class="font-bold text-light mt-3"><?php the_field('section_1_heading'); ?></h5>
-                    <p class="text-light"><?php the_field('section_1_content', false, false); ?></p>
-                </div>
-                <!--Grid column-->
-
-                <!--Grid column-->
-                <div class="col-md-4 mb-r">
-                    <i class="fa fa-3x fa-briefcase blue-text"></i>
-                    <h5 class="font-bold text-light mt-3"><?php the_field('section_2_heading'); ?></h5>
-                    <p class="text-light"><?php the_field('section_2_content', false, false); ?></p>
-                </div>
-                <!--Grid column-->
-
-                <!--Grid column-->
-                <div class="col-md-4 mb-r">
-                    <i class="fa fa-3x fa-industry blue-text"></i>
-                    <h5 class="font-bold text-light mt-3"><?php the_field('section_3_heading'); ?></h5>
-                    <p class="text-light"><?php the_field('section_3_content', false, false); ?></p>
-                </div>
-                <!--Grid column-->
-
-            </div>
-            <!--Grid row-->
-            </div>
-        </section>
-        <!--Section: Features v.1-->
-</div>
+ 
 
 <div class = "container">
 <!--Section: Testimonials v.2-->
 <section class="text-center">
-                <div class="divider-new mt-4 mb-0">
+                <div class="divider-new mb-0">
 
     <!--Section heading-->
 <div class="divider-new">
@@ -174,13 +260,11 @@ the_content();
         </div>
 
 </div>
-                    <p class="section-description lead text-dark mb-5 mx-lg-5"><?php the_field('component_3_subhead', false, false); ?></p>
-
     <!--Section description-->
-    <div class="card card-testimonial hoverable wow fadeIn">
+    <div class="wow fadeIn">
 
     <!--Carousel Wrapper-->
-    <div id="carousel-example-1" class="carousel no-flex p-5 testimonial-carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+    <div id="carousel-example-1" class="carousel no-flex testimonial-carousel slide carousel-fade" data-ride="carousel" data-interval="false">
     
         <!--Slides-->
         <div class="carousel-inner" role="listbox">
@@ -190,7 +274,6 @@ the_content();
                 <div class="testimonial">
                     <!--Avatar-->
                     <div class="avatar pb-4">
-                        <img src="<?php the_field('testimonial_1_image')?>" class="rounded-circle img-fluid img-fluid-test" alt="First sample avatar image">
                     </div>
                     <!--Content-->
                     <p>
@@ -211,7 +294,6 @@ the_content();
                 <div class="testimonial">
                     <!--Avatar-->
                     <div class="avatar pb-4">
-                        <img src="<?php the_field('testimonial_2_image')?>" class="rounded-circle img-fluid img-fluid-test" alt="Second sample avatar image">
                     </div>
                     <!--Content-->
                     <p>
@@ -232,7 +314,6 @@ the_content();
                 <div class="testimonial">
                     <!--Avatar-->
                     <div class="avatar pb-4">
-                        <img src="<?php the_field('testimonial_3_image')?>" class="rounded-circle img-fluid img-fluid-test" alt="Third sample avatar image">
                     </div>
                     <!--Content-->
                     <p>

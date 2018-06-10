@@ -23,187 +23,72 @@
             </div>
         </div>
 
-        <div class="container pb-0 text-center">
+
+
+        <!--Second container-->
+        <div class="container-fluid py-5 bg-light">
+            <div class = "container">
+            <h2 class="h2-responsive text-dark text-center mx-4 font-bold wow fadeIn"><?php the_field('partner_subhead', false, false); ?></h2>
+
+        <!--Section: Features v.1-->
+        <section class="section feature-box text-center">
+
+            <!--Section description-->
+
+            <!--Grid row-->
+            <div class="row text-center">
+
+                <!--Grid column-->
+                <div class="col-md-4 mb-r">
+                    <i class="fa fa-3x fa-wrench blue-text"></i>
+                    <h5 class="font-bold text-dark mt-3"><?php the_field('partner_1_headlines'); ?></h5>
+                    <p class="text-dark"><?php the_field('partner_1_description', false, false); ?></p>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-4 mb-r">
+                    <i class="fa fa-3x fa-bookmark blue-text"></i>
+                    <h5 class="font-bold text-dark mt-3"><?php the_field('partner_2_headline'); ?></h5>
+                    <p class="text-dark"><?php the_field('partner_2_description', false, false); ?></p>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-4 mb-r">
+                    <i class="fa fa-3x fa-users blue-text"></i>
+                    <h5 class="font-bold text-dark mt-3"><?php the_field('partner_3_headline'); ?></h5>
+                    <p class="text-dark"><?php the_field('partner_3_description', false, false); ?></p>
+                </div>
+                <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+            </div>
+        </section>
+
+                <div class="container pb-5 text-center">
             <!--First row-->
             <div class="row wow fadeIn" data-wow-delay="0.2s" style="margin-top: 0px;">
 
   <!--Main information-->
 
                 <div class="col-lg-12 wow fadeIn" data-wow-delay="0.2s">
-                    <h3 class="text-center title my-5 pt-4 dark-grey-text font-bold wow fadeIn" data-wow-delay="0.2s">
+                    <h3 class="text-center title my-5 pt-2 dark-grey-text font-bold wow fadeIn" data-wow-delay="0.2s">
     <div class="divider-new">
                         <strong class = "mx-4 text-dark"><?php the_field('component_1_header') ?></strong>
                     </div>
                     </h3>
-                    <p class="text-dark mt-3"><?php the_field('component_1_content', false, false) ?>
+                    <p class="section-description lead text-dark mt-3"><?php the_field('component_1_content', false, false) ?>
 
 </p>
-                    <a href="/contact" class="btn btn-elegant btn-md"><?php the_field('component_1_button_CTA') ?></a>
+                    <a href="/contact" class="btn btn-elegant btn-lg"><?php the_field('component_1_button_CTA') ?></a>
                 </div>
             </div>
             <!--/.First row-->
 
-<h3 class="text-center title my-5 pt-4 dark-grey-text font-bold wow fadeIn" data-wow-delay="0.2s">
-    <div class="divider-new">
-                        <strong class = "mx-4 text-dark">The Partners</strong>
-                    </div>
-                    </h3>
-            <!--Second row-->
-            <div class="row pt-4 mb-4">
-                <!--First columnn-->
-              
-                <!--First columnn-->
 
-                <!--Second columnn-->
-                <div class="col-lg-6">
-                    <!--Card-->
-                    <div class="card mb-r wow fadeIn" data-wow-delay="0.6s">
-
-                        <!--Card image-->
-                        <img class="img-fluid team-image" src="<?php the_field('partner_1_image') ?>" alt="Card image cap">
-
-                        <!--Card content-->
-                        <div class="card-body">
-                            <!--Title-->
-                            <h4 class="card-title text-center dark-grey-text">
-                                <strong><?php the_field('partner_1_Headline') ?></strong>
-                            </h4>
-                            <hr>
-                            <!--Text-->
-                            <p class="card-text text-center"><?php the_field('partner_1_description', false, false) ?></p>
-                        </div>
-
-                    </div>
-                    <!--/.Card-->
-                </div>
-                <!--Second columnn-->
-
-                <!--Third columnn-->
-                <div class="col-lg-6">
-                    <!--Card-->
-                    <div class="card mb-r wow fadeIn" data-wow-delay="0.8s">
-
-                        <!--Card image-->
-                        <img class="img-fluid team-image" src="<?php the_field('partner_2_image') ?>" alt="Card image cap">
-
-                        <!--Card content-->
-                        <div class="card-body">
-                            <!--Title-->
-                            <h4 class="card-title text-center dark-grey-text">
-                                <strong><?php the_field('partner_2_headline') ?></strong>
-                            </h4>
-                            <hr>
-                            <!--Text-->
-                            <p class="card-text text-center"><?php the_field('partner_2_description', false, false) ?></p>
-                        </div>
-
-                    </div>
-                    <!--/.Card-->
-                </div>
-                <!--Third columnn-->
-            </div>
             <!--/.Second row-->
         </div>
-
-        <!--Second container-->
-        <div class="container-fluid pb-0" style="background-color: #1c2331">
-            <div class="container py-4">
-
-                <!--Section: Services-->
-                <section id="services" class="section mt-3 mb-3 pb-3">
-
-                    <!-- Section heading -->
-                    <h3 class="text-center title my-5 pt-4 text-light font-bold wow fadeIn" data-wow-delay="0.2s">
-                        <div class="divider-new">
-                        <strong class = "mx-4">Our Services</strong>
-                    </div>
-                    </h3>
-
-                    <!-- First row -->
-                    <div class="row wow fadeIn" data-wow-delay="0.4s">
-
-                        <!-- First column -->
-                        <div class="col-md-6 mb-r text-center">
-
-                            <!--Panel-->
-                            <div class="card card-body text-left white hoverable">
-                                <p class="feature-title title font-bold dark-grey-text font-up spacing mt-4 mx-4">
-                                    <i class="fa fa-square blue-text mr-2" aria-hidden="true"></i>
-                                    <strong><?php the_field('module_1_heading') ?></strong>
-                                </p>
-                                <p class="grey-text font-small mx-4"><?php the_field('module_1_content', false, false) ?>
-                                    <p class="font-small font-bold blue-text mx-4 mb-0">
-                                        <a href="/services/home-renovations">See Examples</a>
-                                    </p>
-                                </p>
-                            </div>
-                            <!--/.Panel-->
-
-                        </div>
-                        <!-- /First column -->
-
-                        <!-- Second column -->
-                        <div class="col-md-6 mb-r text-center">
-
-                            <!--Panel-->
-                            <div class="card card-body text-left white hoverable">
-                                <p class="feature-title title font-bold dark-grey-text font-up spacing mt-4 mx-4">
-                                    <i class="fa fa-square blue-text mr-2" aria-hidden="true"></i>
-                                    <strong><?php the_field('module_2_heding') ?></strong>
-                                </p>
-                                <p class="grey-text font-small mx-4"><?php the_field('module_2_content', false, false) ?>
-                                    <p class="font-small font-bold blue-text mx-4 mb-0">
-                                        <a href="/services/new-construction">See Examples</a>
-                                    </p>
-                                </p>
-                            </div>
-                            <!--/.Panel-->
-
-                        </div>
-                        <!-- /.Second column -->
-
-                        <!-- Third column -->
-                        <div class="col-md-6 mb-r text-center">
-
-                            <!--Panel-->
-                            <div class="card card-body text-left white hoverable">
-                                <p class="feature-title title font-bold dark-grey-text font-up spacing mt-4 mx-4">
-                                    <i class="fa fa-square blue-text mr-2" aria-hidden="true"></i>
-                                    <strong><?php the_field('module_3_heading') ?></strong>
-                                </p>
-                                <p class="grey-text font-small mx-4"><?php the_field('module_3_content', false, false) ?>
-                                    <p class="font-small font-bold blue-text mx-4 mb-0">
-                                        <a href="/services/property-management">See Examples</a>
-                                    </p>
-                                </p>
-                            </div>
-                            <!--/.Panel-->
-
-                        </div>
-                        <!-- /.Third column -->
-
-                        <!-- Fourth column -->
-                        <div class="col-md-6 mb-r text-center">
-
-                            <!--Panel-->
-                            <div class="card card-body text-left white hoverable">
-                                <p class="feature-title title font-bold dark-grey-text font-up spacing mt-4 mx-4">
-                                    <i class="fa fa-square blue-text mr-2" aria-hidden="true"></i>
-                                    <strong><?php the_field('module_4_heading') ?></strong>
-                                </p>
-                                <p class="grey-text font-small mx-4"><?php the_field('module_4_content', false, false) ?>
-                                    <p class="font-small font-bold blue-text mx-4 mb-0">
-                                        <a href="/services/other">See Examples</a>
-                                    </p>
-                                </p>
-                            </div>
-                            <!--/.Panel-->
-
-                        </div>
-                        <!-- /.Fourth column -->
-
-                    </div>
-                    <!-- /.First row -->
-
-                </section>
-                <!--/Section: Services-->
+        <!--Section: Features v.1-->
+</div>
